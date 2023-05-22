@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D/3D Transformation flip effect</title>
+    <style>
+        .container{
+            position: relative;
+            width: 300px;
+            height: 350px;
+            /* background: green; */
+        }
+        .card{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: all 0.5s ease;
+            /* background: yellow; */
+        }
+        .card:hover{
+            transform: rotateY(180deg);
+        }
+        .thefront{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            background: #ffc728;
+            border-radius: 25px;
+
+            
+        }
+        .theback{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            background: #0e5207;
+            border-radius: 25px;
+            transform:rotateY(180deg);
+        }
+        .thefront h1{
+            color: #333;
+            text-align: center;
+            padding-top: 25px;
+            font-family: 'zilla slab' sans-serif;
+            border-radius: 20px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        
+        .theback h1{
+            color: #ffff;
+            text-align: center;
+            padding-top: 25px;
+            font-family: 'zilla slab' sans-serif;
+            border-radius: 20px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .theback p{
+            color: #fff;
+            font-size: 20px;
+            text-align: justify;
+            padding: 0px 25px;
+        }
+        .thefront p{
+            color: #333;
+            font-size: 20px;
+            text-align: justify;
+            padding: 0px 25px;
+        }
+    </style>
+</head>
+<body>
+    
+        <div class="container">
+            <div class="card">
+
+                <div class="thefront">
+                    <h1>The front card</h1>
+                    <p>The chemical energy of food is the main source of energy required by all living organisms. This energy is transmitted to different trophic levels along the food chain. This energy flow is based on two different laws of thermodynamics:
+                        
+                    </p>
+                </div>
+                <div class="theback">
+                    <h1>The back card</h1>
+                    <p>The chemical energy of food is the main source of energy required by all living organisms. This energy is transmitted to different trophic levels along the food chain. This energy flow is based on two different laws of thermodynamics:
+                        
+                    </p>
+                </div>
+
+            </div>
+        </div>
+</body>
+</html>
